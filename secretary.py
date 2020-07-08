@@ -76,10 +76,9 @@ def add(doc_number):
   if search_doc_number(doc_number) == 0:
     new_doc = {}
     new_doc['type'] = input('Введите тип документа: ')
-    
+    new_doc['number'] = doc_number
     new_doc['name'] = input('Введите имя владельца: ')
     shelf_number = input('Введите номер полки: ')
-    new_doc['number'] = doc_number
     check_shelf(shelf_number)
     if shelf_number in directories.keys():
       documents.append(new_doc)

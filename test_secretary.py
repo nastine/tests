@@ -10,8 +10,6 @@ class SecretaryTest(unittest.TestCase):
             self.dirs, self.docs = secretary.directories, secretary.documents
             
 
-
-
     def test_people(self):
         self.assertEqual(secretary.people('10006'), 'Аристарх Павлов')
         self.assertNotEqual(secretary.people('11-2'), 'Аристарх Павлов')
